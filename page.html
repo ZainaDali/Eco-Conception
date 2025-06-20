@@ -5,11 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Audit de conception responsable du service numérique PayPal" />
   <title>Audit Éco-conception – PayPal</title>
-
   <link rel="stylesheet" href="style.css" />
-
 </head>
 <body>
+
   <header>
     <h1>Audit de conception responsable : PayPal</h1>
     <nav>
@@ -24,50 +23,48 @@
   </header>
 
   <main>
-    <!-- ✅ SECTION 1 -->
+
+    <!-- SECTION 1 : INTRODUCTION -->
     <section id="intro">
-  <h2>1 – Présentation de PayPal & ODD</h2>
+      <h2>1 – Présentation de PayPal & ODD</h2>
+      <div class="card">
+        <h3>Présentation du service</h3>
+        <p>PayPal est un service de paiement en ligne utilisé dans le monde entier. Il permet aux utilisateurs d’envoyer et de recevoir de l’argent de manière sécurisée, rapide et simple, sans avoir à partager leurs informations bancaires avec les vendeurs.</p>
+        <p>Il est utilisé aussi bien par les particuliers que par les professionnels.</p>
 
-  <h3>Présentation du service</h3>
-  <p>
-    PayPal est un service de paiement en ligne utilisé dans le monde entier. Il permet aux utilisateurs d’envoyer et de recevoir de l’argent de manière sécurisée, rapide et simple, sans avoir à partager leurs informations bancaires avec les vendeurs. Il est utilisé aussi bien par les particuliers que par les professionnels.
-  </p>
+        <h3>Unité fonctionnelle analysée</h3>
+        <p>Pour cet audit, nous avons choisi d’analyser la fonctionnalité de <strong>paiement en ligne</strong>, accessible avec ou sans compte PayPal.</p>
 
-  <h3>Unité fonctionnelle analysée</h3>
-  <p>
-    Pour cet audit, nous avons choisi d’analyser la fonctionnalité de <strong>paiement en ligne</strong>. Cette fonction permet à un utilisateur d’acheter un produit ou un service en quelques clics, avec ou sans compte PayPal, grâce à une interface rapide et sécurisée.
-  </p>
+        <h3>Objectifs de Développement Durable (ODD) liés</h3>
+        <ul>
+          <li><strong>ODD 8 – Travail décent et croissance économique :</strong> soutien aux petites entreprises et indépendants.</li>
+          <li><strong>ODD 9 – Industrie, innovation et infrastructure :</strong> développement d’une infrastructure numérique efficace.</li>
+          <li><strong>ODD 10 – Réduction des inégalités :</strong> inclusion financière pour les non-bancarisés.</li>
+        </ul>
+      </div>
+    </section>
 
-  <h3>Objectifs de Développement Durable (ODD) liés</h3>
-  <ul>
-    <li><strong>ODD 8 – Travail décent et croissance économique :</strong> PayPal soutient les petites entreprises, freelances et indépendants à travers le monde en leur permettant de recevoir des paiements facilement.</li>
-    <li><strong>ODD 9 – Industrie, innovation et infrastructure :</strong> En utilisant des technologies innovantes pour sécuriser et simplifier les transactions numériques, PayPal contribue au développement d’une infrastructure numérique efficace.</li>
-    <li><strong>ODD 10 – Réduction des inégalités :</strong> PayPal facilite l’inclusion financière pour les personnes qui n’ont pas accès aux services bancaires traditionnels.</li>
-  </ul>
-</section>
-
-
+    <!-- SECTION 2 : ÉCOCONCEPTION -->
     <section id="ecoconception">
       <h2>2 – Analyse de l’écoconception</h2>
-
-        <p>
-          L’écoconception consiste à réduire l’impact environnemental d’un service numérique tout au long de son cycle de vie, en s’appuyant sur des référentiels comme le <strong>RGESN</strong> ou les <strong>115 bonnes pratiques GreenIT.fr</strong>. Pour cette analyse, nous avons étudié l’interface de paiement en ligne de <strong>PayPal</strong>.
-        </p>
+      <div class="card">
+        <p>L’écoconception vise à réduire l’impact environnemental d’un service numérique tout au long de son cycle de vie. Elle s’appuie sur des référentiels comme le <strong>RGESN</strong> et les <strong>115 bonnes pratiques GreenIT.fr</strong>.</p>
+        <p>Nous avons étudié ici l’interface de paiement en ligne de <strong>PayPal</strong>.</p>
 
         <h3>🔍 Audit environnemental</h3>
         <ul>
-          <li><strong>EcoIndex :</strong> E (34/100)</li>
+          <li><strong>EcoIndex :</strong> 34/100 → note <strong>E</strong></li>
           <li><strong>Poids de la page :</strong> environ 4,1 Mo</li>
-          <li><strong>Nombre de requêtes :</strong> 120</li>
+          <li><strong>Nombre de requêtes HTTP :</strong> environ 120</li>
           <li><strong>Outils utilisés :</strong> EcoIndex, Lighthouse, GreenIT Analysis</li>
         </ul>
 
         <h3>⚠️ Problèmes identifiés</h3>
         <ul>
-          <li>Trop de scripts tiers (tracking, sécurité, analytics)</li>
+          <li>Trop de scripts tiers (analytics, tracking, sécurité)</li>
           <li>Images non compressées</li>
-          <li>Pas de lazy loading</li>
-          <li>Interface peu optimisée pour mobile</li>
+          <li>Absence de lazy loading</li>
+          <li>Interface non mobile-first</li>
           <li>Pas d’indication d’hébergement écoresponsable</li>
         </ul>
 
@@ -79,115 +76,111 @@
 
         <h3>🚧 Freins à l’écoconception</h3>
         <ul>
-          <li>Complexité technique liée à la sécurité des paiements</li>
-          <li>Dépendance aux outils externes commerciaux</li>
-          <li>Manque de démarche environnementale visible</li>
+          <li>Complexité liée à la sécurité des paiements</li>
+          <li>Dépendance à des outils tiers commerciaux</li>
+          <li>Manque de stratégie environnementale affichée</li>
         </ul>
 
-        <h3>✅ Opportunités et bénéfices</h3>
+        <h3>✅ Opportunités & bénéfices</h3>
         <ul>
-          <li>Réduction du poids de la page = moins d’énergie utilisée</li>
-          <li>Temps de chargement plus rapide</li>
-          <li>Amélioration de l’expérience utilisateur</li>
-          <li>Réduction des coûts de bande passante et maintenance</li>
+          <li>Réduction de l’impact environnemental</li>
+          <li>Chargement plus rapide</li>
+          <li>Meilleure expérience utilisateur</li>
+          <li>Diminution des coûts de bande passante</li>
         </ul>
 
-        <p>
-          En résumé, PayPal est un service utile et sécurisé, mais il n’intègre pas encore les principes d’écoconception. Une optimisation technique, une meilleure sobriété fonctionnelle et un hébergement plus vert permettraient de réduire considérablement son empreinte environnementale.
-        </p>
-
+        <p><strong>Conclusion :</strong> PayPal est efficace et sécurisé, mais encore loin d’une démarche d’écoconception. Il y a un fort potentiel d’amélioration avec des actions simples.</p>
+      </div>
     </section>
 
-    <!-- ✅ SECTION 3 -->
+    <!-- SECTION 3 : ACCESSIBILITÉ -->
     <section id="accessibilite">
-      <h2>Accessibilité & Qualité </h2>
-
+      <h2>3 – Accessibilité & Qualité</h2>
       <div class="cards-container">
         <div class="card">
           <h4>💡 Accessibilité automatique</h4>
-          <p>Score <strong>100/100</strong> via Lighthouse. Une seule erreur Wave : l'absence de titre HTML. Le reste est bien structuré (ARIA, images, liens).</p>
+          <p>Score <strong>100/100</strong> via Lighthouse. Une seule erreur détectée par Wave : absence de titre HTML. Structure ARIA correcte.</p>
         </div>
-
         <div class="card">
           <h4>🎨 Contrastes conformes</h4>
-          <p>Ratio de <strong>8.59:1</strong> (bleu/blanc), conforme au niveau <strong>AAA</strong> des WCAG. Tests confirmés avec Contrast-Finder.</p>
+          <p>Ratio <strong>8.59:1</strong> (bleu/blanc), conforme <strong>AAA WCAG</strong>. Vérifié avec Contrast-Finder.</p>
         </div>
-
         <div class="card">
           <h4>🔍 Zoom & Redimensionnement</h4>
-          <p>Zoom à 200 % sans perte de lisibilité. Mise en page fluide, conforme au critère <code>1.4.4</code>.</p>
+          <p>Zoom à 200 % sans perte. Mise en page fluide, conforme au critère <code>1.4.4</code>.</p>
         </div>
-
         <div class="card">
           <h4>⌨️ Navigation clavier</h4>
-          <p>Navigation fluide avec <kbd>Tab</kbd>, ordre logique et focus bien visible. Conforme aux critères <code>2.1.1</code> et <code>2.4.7</code>.</p>
+          <p>Navigation fluide avec <kbd>Tab</kbd>. Ordre logique et focus visible. Conforme aux critères <code>2.1.1</code> et <code>2.4.7</code>.</p>
         </div>
       </div>
     </section>
 
-    <!-- ✅ SECTION 4 -->
+    <!-- SECTION 4 : PROTECTION DES DONNÉES -->
     <section id="donnees">
       <h2>4 – Protection des données personnelles</h2>
-      <p>Paypal est une solution de paiements en ligne et tout ce touche à l'argent</p><br>
-      <h3>Responsabilité</h3>
-      <p>En tant qu'entreprise qui gère des données sensibles et des payements elle est consciente de l'importance de la sécurité et de la protection des données pour ses clients, que ce soient des entreprises marchandes ou des particulier </p>
-      <h3>EU Digital Services Act</h3>
-      <p>Paypal met en place plusieurs niveaux de sécurité et font en sorte de rester conforme aux réglements de chaque pays. Pour l'Europe il mettent en place le document <a href="https://www.paypalobjects.com/marketing/web/complaince/EU-Digital-Services-Act-at-PayPal.pdf">EU Digital Services Act at PayPal</a> qui promet le suivant:</p>
-      <ul>
-        <li>Un formulaire pour que n'importe quel utilisateur puisse signaler un souci de sécurité</li>
-        <li>Un formulaire pour recevoir des demandes de toutes les organisations régularisatrices</li>
-        <li>La promesse de la protection contre les opérations illégales</li>
-        <li>Un rapport de transparence des actions mises en place</li>
-      </ul><br>
-      <h3>Conseils pour les utilisateurs</h3>
-      <p>Paypal met en place plusieurs articles pour aider leurs utilisateur à gérer du mieux possible la sécurité de leurs informations et comment éviter les fraudes.</p><br>
-      <h3>Contrôle de ses données</h3>
-      <p>On peut directement sur son profil gérer plusieurs paramètres:</p>
-      <ul>
-        <li>Gérer la colecte de données et leur partage</li>
-        <li>Paramétrer les options de sécurité du compte</li>
-        <li>Demander une copie de ses données</li>
-      </ul>
+      <div class="card">
+        <h3>Responsabilité</h3>
+        <p>PayPal traite des données sensibles et applique plusieurs niveaux de sécurité pour se conformer aux réglementations locales et internationales.</p>
+
+        <h3>EU Digital Services Act</h3>
+        <p>PayPal publie un document officiel : <a href="https://www.paypalobjects.com/marketing/web/complaince/EU-Digital-Services-Act-at-PayPal.pdf" target="_blank">EU Digital Services Act at PayPal</a>, qui garantit :</p>
+        <ul>
+          <li>Un formulaire de signalement de contenus illicites</li>
+          <li>Un canal dédié aux autorités</li>
+          <li>Une protection contre les opérations illégales</li>
+          <li>Un rapport de transparence</li>
+        </ul>
+
+        <h3>Conseils aux utilisateurs</h3>
+        <p>Des articles aident les utilisateurs à sécuriser leurs comptes et éviter les fraudes.</p>
+
+        <h3>Contrôle de ses données</h3>
+        <ul>
+          <li>Gestion des autorisations de collecte</li>
+          <li>Paramètres de sécurité personnalisables</li>
+          <li>Demande de copie des données</li>
+        </ul>
+      </div>
     </section>
 
-    <!-- ✅ SECTION 5 -->
-<section id="recommandations" class="card">
-  <h2>5 – Recommandations & Conclusion</h2>
-  <div class="grid-reco">
-    <div class="reco-box">
-      <span class="emoji">⚙️</span>
-      <h3>Optimiser les performances</h3>
-      <p>Alléger les pages et scripts pour réduire l’impact énergétique.</p>
-    </div>
-    <div class="reco-box">
-      <span class="emoji">🌍</span>
-      <h3>Transparence environnementale</h3>
-      <p>Afficher les données sur la consommation carbone du service.</p>
-    </div>
-    <div class="reco-box">
-      <span class="emoji">🧠</span>
-      <h3>Sensibilisation</h3>
-      <p>Informer les utilisateurs sur les bons usages numériques.</p>
-    </div>
-  </div>
-  <div class="conclusion-box">
-    <p><strong>Conclusion :</strong> PayPal dispose d’une influence mondiale. En intégrant des pratiques plus sobres et éthiques, la plateforme pourrait devenir un exemple de responsabilité numérique.</p>
-  </div>
-</section>
+    <!-- SECTION 5 : RECOMMANDATIONS -->
+    <section id="recommandations" class="card">
+      <h2>5 – Recommandations & Conclusion</h2>
+      <div class="grid-reco">
+        <div class="reco-box">
+          <span class="emoji">⚙️</span>
+          <h3>Optimiser les performances</h3>
+          <p>Réduire scripts et images pour alléger les pages.</p>
+        </div>
+        <div class="reco-box">
+          <span class="emoji">🌍</span>
+          <h3>Transparence environnementale</h3>
+          <p>Afficher des données sur l’impact carbone.</p>
+        </div>
+        <div class="reco-box">
+          <span class="emoji">🧠</span>
+          <h3>Sensibilisation</h3>
+          <p>Informer les utilisateurs sur les pratiques numériques responsables.</p>
+        </div>
+      </div>
+      <div class="conclusion-box">
+        <p><strong>Conclusion :</strong> En améliorant ses performances et sa transparence, PayPal pourrait devenir un modèle en matière de sobriété numérique.</p>
+      </div>
+    </section>
 
   </main>
 
   <footer>
     <p>&copy; 2025 – Audit réalisé dans le cadre du module Sobriété Numérique à l’EFREI</p>
   </footer>
+
   <script>
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-</script>
-<!-- 🔼 Bouton Retour en haut -->
-<button id="backToTop" onclick="scrollToTop()">↑ Retour en haut</button>
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+  <button id="backToTop" onclick="scrollToTop()">↑ Retour en haut</button>
 
 </body>
-
 </html>
