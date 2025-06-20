@@ -87,3 +87,51 @@ footer {
 #backToTop:hover {
   background-color: #003366;
 }
+
+
+/* 💡 Bloc recommandations stylé */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* 💡 Grille responsive pour les recommandations */
+.grid-reco {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* 💡 Chaque bloc de recommandation */
+.reco-box {
+  background-color: #f3f9ff;
+  border-left: 4px solid #0077cc;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.reco-box .emoji {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.reco-box h3 {
+  margin: 0.5rem 0 0.3rem;
+  font-size: 1.1rem;
+  color: #003366;
+}
+
+/* 💡 Bloc conclusion */
+.conclusion-box {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #eaf4ea;
+  border-left: 4px solid #3b7a3b;
+  border-radius: 6px;
+  font-style: italic;
+}
