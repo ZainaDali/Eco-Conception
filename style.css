@@ -70,20 +70,60 @@ footer {
     flex-direction: column;
   }
 }
-#backToTop {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #0066cc;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 15px;
-  font-size: 14px;
-  cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+/* Section Accessibilité & Qualité */
+#accessibilite-qualite {
+  margin: 2rem auto;
+  max-width: 900px;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+  color: #222;
 }
 
-#backToTop:hover {
-  background-color: #003366;
+
+
+#accessibilite-qualite .cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+#accessibilite-qualite .card {
+  background-color: #f0f7ff;
+  border-left: 5px solid #005ea6;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease;
+}
+
+#accessibilite-qualite .card:hover {
+  transform: translateY(-4px);
+}
+
+#accessibilite-qualite .card h4 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: #003366;
+}
+
+#accessibilite-qualite .card p {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+#accessibilite-qualite .conclusion-box {
+  background-color: #e8f5e9;
+  border-left: 4px solid #2e7d32;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 6px;
+}
+
+/* Responsive mobile : 1 carte par ligne */
+@media (max-width: 768px) {
+  #accessibilite-qualite .cards-container {
+    grid-template-columns: 1fr;
+  }
 }
